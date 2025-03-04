@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diaries of Kitchen - Login</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+   
+    body {
+      background: linear-gradient(135deg, #3498db, #feb47b); /* Gradient Background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .textbox {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .textbox input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .textbox input:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    button.btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button.btn:hover {
+      background-color: #3498db;
+    }
+
+    .remember-me {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .remember-me input {
+      margin-right: 10px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .links a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 400px;
+      text-align: center;
+    }
+
+    .modal-content input {
+      width: 80%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+    }
+
+    .modal-content button {
+      width: 80%;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .modal-content button:hover {
+      background-color: #3498db;
+    }
+
+    /* OTP verification */
+    .otp-container {
+      display: none;
+    }
+
+    .otp-container input {
+      width: 50px;
+      margin: 5px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      .box {
+        padding: 25px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>Login to Diaries of Kitchen</h2>
+      <form action="dashboard.html" method="POST">
+        <div class="textbox">
+          <input type="text" placeholder="Username" name="username" required>
+        </div>
+        <div class="textbox">
+          <input type="password" placeholder="Password" name="password" required>
+        </div>
+        <div class="remember-me">
+          <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="links">
+          <a href="#" id="forgot-password">Forgot Password?</a>
+          <a href="sign.html">Sign Up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for Forgot Password -->
+  <div class="modal" id="forgotPasswordModal">
+    <div class="modal-content">
+      <h3>Enter your Email for OTP</h3>
+      <p>We will send you an OTP to reset your password.</p>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button id="sendOtpBtn">Send OTP</button>
+     
+      <div class="otp-container" id="otpContainer">
+        <p>Enter the OTP sent to your email:</p>
+        <input type="text" id="otp1" maxlength="1">
+        <input type="text" id="otp2" maxlength="1">
+        <input type="text" id="otp3" maxlength="1">
+        <input type="text" id="otp4" maxlength="1">
+        <button id="verifyOtpBtn">Verify OTP</button>
+      </div>
+     
+      <p id="responseMessage" style="color: #3498db; display: none;"></p>
+      <button id="closeModal" style="margin-top: 10px;">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Show the modal when "Forgot Password?" is clicked
+    document.getElementById('forgot-password').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('forgotPasswordModal').style.display = 'flex';
+    });
+
+    // Close the modal
+    document.getElementById('closeModal').addEventListener('click', function() {
+      document.getElementById('forgotPasswordModal').style.display = 'none';
+    });
+
+    // Simulate sending OTP
+    document.getElementById('sendOtpBtn').addEventListener('click', function() {
+      var email = document.getElementById('email').value;
+      if (email) {
+        // Simulate sending OTP
+        var otp = Math.floor(1000 + Math.random() * 9000); // Generate a 4-digit OTP
+        localStorage.setItem('otp', otp); // Store OTP temporarily
+        document.getElementById('otpContainer').style.display = 'block';
+        document.getElementById('responseMessage').style.display = 'none';
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    });
+
+    // OTP Verification
+    document.getElementById('verifyOtpBtn').addEventListener('click', function() {
+      var enteredOtp = document.getElementById('otp1').value +
+                       document.getElementById('otp2').value +
+                       document.getElementById('otp3').value +
+                       document.getElementById('otp4').value;
+     
+      var storedOtp = localStorage.getItem('otp');
+     
+      if (enteredOtp === storedOtp) {
+        document.getElementById('responseMessage').style.display = 'block';
+        document.getElementById('responseMessage').textContent = 'OTP Verified Successfully!';
+      } else {
+        document.getElementById('responseMessage').style.display = 'block';
+        document.getElementById('responseMessage').textContent = 'Invalid OTP. Please try again.';
+      }
+    });
+  </script>
+</body>
+</html>
+
+

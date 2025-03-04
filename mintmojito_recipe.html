@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint Mojito Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recipe-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-image {
+            width: 45%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients {
+            width: 50%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-image {
+                width: 80%;
+                margin-bottom: 2rem;
+            }
+
+            .ingredients, .instructions {
+                width: 80%;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Recipe Details</h1>
+</header>
+
+<main>
+    <h2 class="recipe-title">Mint Mojito</h2>
+
+    <div class="recipe-container">
+        <section class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>10 fresh mint leaves</li>
+                <li>1 tablespoon sugar (or to taste)</li>
+                <li>1/2 lime, cut into wedges</li>
+                <li>2 oz white rum</li>
+                <li>Club soda or sparkling water</li>
+                <li>Ice cubes</li>
+                <li>Lime slices (for garnish, optional)</li>
+                <li>Mint sprig (for garnish, optional)</li>
+            </ul>
+        </section>
+        <img class="recipe-image" src="" alt="Mint Mojito">
+    </div>
+
+    <section class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li><strong>Muddle the Mint:</strong> In a tall glass, place the mint leaves, lime wedges, and sugar. Use a muddler or the back of a spoon to gently crush the mint and lime to release the oils and juice.</li>
+            <li><strong>Add the Rum:</strong> Pour the white rum into the glass and stir to combine with the muddled mint and lime.</li>
+            <li><strong>Fill with Ice:</strong> Add ice cubes to the glass, then top with club soda or sparkling water, depending on your preference for fizz.</li>
+            <li><strong>Garnish and Serve:</strong> Stir the mojito and garnish with a lime slice and a mint sprig. Serve chilled.</li>
+        </ol>
+    </section>
+
+    <section class="video-container">
+        <h3>Watch the Recipe Video</h3>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Mint Mojito Recipe Video"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Food Courses. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

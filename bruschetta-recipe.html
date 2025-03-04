@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruschetta Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recipe-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2rem;
+        }
+
+        /* Styling for the image on the right */
+        .recipe-image {
+            width: 45%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the ingredients section */
+        .ingredients {
+            width: 50%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .ingredients ul {
+            padding-left: 20px;
+        }
+
+        .ingredients ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Full-width styling for instructions */
+        .instructions {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .instructions h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+        }
+
+        .instructions ol li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .reviews {
+            margin-top: 3rem;
+            background-color: #fff;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .review-card {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+
+        .review-card .review-author {
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .review-card .review-text {
+            font-style: italic;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .recipe-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-image {
+                width: 80%; /* Image takes up more space on smaller screens */
+                margin-bottom: 2rem;
+            }
+
+            .ingredients, .instructions {
+                width: 80%; /* Ingredients and instructions take up more space on smaller screens */
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Recipe Details</h1>
+</header>
+
+<main>
+    <!-- Recipe Title -->
+    <h2 class="recipe-title">Bruschetta</h2>
+
+    <!-- Recipe Container (Image and Ingredients/Instructions side by side) -->
+    <div class="recipe-container">
+        <!-- Ingredients Section -->
+        <section class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>1 loaf of baguette or rustic Italian bread (sliced into 1-inch thick pieces)</li>
+                <li>3-4 ripe tomatoes (diced)</li>
+                <li>1/4 cup fresh basil (chopped)</li>
+                <li>2-3 tablespoons extra virgin olive oil</li>
+                <li>2 cloves garlic (minced)</li>
+                <li>Salt and black pepper to taste</li>
+                <li>Optional: balsamic vinegar for drizzling</li>
+            </ul>
+        </section>
+
+        <!-- Recipe Image -->
+        <img class="recipe-image" src="https://urbanfarmandkitchen.com/wp-content/uploads/2023/04/burrata-bruschetta-8.jpg" alt="Bruschetta">
+    </div>
+
+    <!-- Instructions Section -->
+    <section class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li><strong>Prepare the Bread:</strong> Preheat your oven to 400°F (200°C). Arrange the slices of bread on a baking sheet. Toast the bread slices in the oven for about 5-7 minutes, or until golden brown and crispy. You can also grill the bread for a smokier flavor.</li>
+            <li><strong>Make the Tomato Mixture:</strong> While the bread is toasting, dice the tomatoes and chop the fresh basil. In a bowl, combine the tomatoes, basil, and minced garlic. Drizzle the olive oil over the mixture, and season with salt and pepper to taste. Mix everything gently to combine.</li>
+            <li><strong>Assemble the Bruschetta:</strong> Once the bread slices are toasted, rub each slice with a cut clove of garlic to add flavor. Spoon the tomato mixture generously over each toasted slice of bread.</li>
+            <li><strong>Optional:</strong> Drizzle a little balsamic vinegar over the top for an extra burst of flavor.</li>
+            <li><strong>Serve:</strong> Enjoy your homemade bruschetta as a tasty appetizer or snack!</li>
+        </ol>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section class="video-container">
+        <h3>Watch the Recipe Video</h3>
+        <iframe src="https://www.youtube.com/embed/so8KljpBBUQ" title="Bruschetta Recipe Video"></iframe>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <h3>Reviews for Bruschetta</h3>
+
+        <!-- Review 1 -->
+        <div class="review-card">
+            <p class="review-author">Emily Brown</p>
+            <p class="review-text">"Absolutely delicious! The toasted bread with the fresh tomato and basil is a perfect combination. Will make this again soon!"</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+            <p class="review-author">Michael Lee</p>
+            <p class="review-text">"I loved the simplicity of this dish. Great as an appetizer for a casual dinner party. My guests loved it!"</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+            <p class="review-author">Sara Williams</p>
+            <p class="review-text">"This bruschetta recipe is a game changer! I added a touch of balsamic glaze for extra flavor, and it turned out perfect!"</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Food Courses. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

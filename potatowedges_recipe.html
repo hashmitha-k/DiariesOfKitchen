@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Wedges Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recipe-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-image {
+            width: 45%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients {
+            width: 50%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-image {
+                width: 80%;
+                margin-bottom: 2rem;
+            }
+
+            .ingredients, .instructions {
+                width: 80%;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Recipe Details</h1>
+</header>
+
+<main>
+    <h2 class="recipe-title">Potato Wedges</h2>
+
+    <div class="recipe-container">
+        <section class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>4 large potatoes</li>
+                <li>2 tablespoons olive oil</li>
+                <li>1 teaspoon garlic powder</li>
+                <li>1 teaspoon paprika</li>
+                <li>1 teaspoon dried oregano</li>
+                <li>Salt and pepper to taste</li>
+                <li>1/2 teaspoon chili powder (optional)</li>
+                <li>Fresh parsley, chopped (for garnish)</li>
+            </ul>
+        </section>
+        <img class="recipe-image" src="" alt="Potato Wedges">
+    </div>
+
+    <section class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li><strong>Preheat Oven:</strong> Preheat your oven to 400°F (200°C). Line a baking sheet with parchment paper for easy cleanup.</li>
+            <li><strong>Prepare Potatoes:</strong> Wash the potatoes thoroughly and cut them into wedges. Leave the skin on for extra texture.</li>
+            <li><strong>Season:</strong> In a large bowl, toss the potato wedges with olive oil, garlic powder, paprika, oregano, chili powder (if using), salt, and pepper until well-coated.</li>
+            <li><strong>Arrange on Baking Sheet:</strong> Place the seasoned potato wedges in a single layer on the baking sheet. Ensure they are evenly spaced out for even cooking.</li>
+            <li><strong>Bake:</strong> Bake for 30-35 minutes, flipping the wedges halfway through cooking, until they are golden and crispy on the outside and tender inside.</li>
+            <li><strong>Serve:</strong> Garnish with freshly chopped parsley and serve hot with your favorite dipping sauce (e.g., ketchup, ranch, or garlic mayo).</li>
+        </ol>
+    </section>
+
+    <section class="video-container">
+        <h3>Watch the Recipe Video</h3>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Potato Wedges Recipe Video"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Food Courses. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

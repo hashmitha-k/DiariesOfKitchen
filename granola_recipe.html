@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granola Bars Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recipe-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-image {
+            width: 45%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients {
+            width: 50%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-image {
+                width: 80%;
+                margin-bottom: 2rem;
+            }
+
+            .ingredients, .instructions {
+                width: 80%;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Recipe Details</h1>
+</header>
+
+<main>
+    <h2 class="recipe-title">Granola Bars</h2>
+
+    <div class="recipe-container">
+        <section class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>2 cups old-fashioned rolled oats</li>
+                <li>1/2 cup honey</li>
+                <li>1/4 cup peanut butter or almond butter</li>
+                <li>1/4 cup coconut oil, melted</li>
+                <li>1/4 cup brown sugar</li>
+                <li>1/2 teaspoon vanilla extract</li>
+                <li>1/4 teaspoon salt</li>
+                <li>1/2 cup mini chocolate chips (optional)</li>
+                <li>1/4 cup dried cranberries or raisins (optional)</li>
+                <li>1/4 cup chopped nuts (almonds, walnuts, or cashews) (optional)</li>
+            </ul>
+        </section>
+        <img class="recipe-image" src="" alt="Granola Bars">
+    </div>
+
+    <section class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li><strong>Prepare the Pan:</strong> Line an 8x8-inch baking pan with parchment paper or lightly grease it.</li>
+            <li><strong>Mix Wet Ingredients:</strong> In a small saucepan, melt honey, peanut butter (or almond butter), coconut oil, brown sugar, and vanilla extract over medium heat. Stir until smooth and fully combined.</li>
+            <li><strong>Combine Dry Ingredients:</strong> In a large mixing bowl, combine the rolled oats, salt, chocolate chips, dried cranberries, and nuts.</li>
+            <li><strong>Mix Wet & Dry Ingredients:</strong> Pour the wet mixture over the dry ingredients. Stir until everything is well coated.</li>
+            <li><strong>Press into Pan:</strong> Transfer the mixture to the prepared baking pan and press it down firmly to compact the mixture evenly.</li>
+            <li><strong>Chill:</strong> Refrigerate for at least 2 hours or until the bars have set and firmed up.</li>
+            <li><strong>Slice & Serve:</strong> Once set, remove the granola from the pan and slice into bars. Store in an airtight container for up to a week!</li>
+        </ol>
+    </section>
+
+    <section class="video-container">
+        <h3>Watch the Recipe Video</h3>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Granola Bars Recipe Video"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Food Courses. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

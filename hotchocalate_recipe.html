@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Chocolate Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recipe-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-image {
+            width: 45%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients {
+            width: 50%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-image {
+                width: 80%;
+                margin-bottom: 2rem;
+            }
+
+            .ingredients, .instructions {
+                width: 80%;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Recipe Details</h1>
+</header>
+
+<main>
+    <h2 class="recipe-title">Hot Chocolate</h2>
+
+    <div class="recipe-container">
+        <section class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>2 cups whole milk</li>
+                <li>2 tablespoons unsweetened cocoa powder</li>
+                <li>2 tablespoons sugar (or to taste)</li>
+                <li>1/4 teaspoon vanilla extract</li>
+                <li>1/4 cup heavy cream (optional, for extra richness)</li>
+                <li>Whipped cream (for topping, optional)</li>
+                <li>Chocolate shavings or cocoa powder (for garnish, optional)</li>
+            </ul>
+        </section>
+        <img class="recipe-image" src="" alt="Hot Chocolate">
+    </div>
+
+    <section class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li><strong>Heat the Milk:</strong> In a small saucepan, heat the milk over medium heat until hot, but not boiling.</li>
+            <li><strong>Mix Cocoa and Sugar:</strong> In a separate bowl, whisk together the cocoa powder and sugar.</li>
+            <li><strong>Combine Ingredients:</strong> Add the cocoa mixture to the hot milk, stirring until the cocoa and sugar are completely dissolved.</li>
+            <li><strong>Add Flavor:</strong> Stir in the vanilla extract and heavy cream (if using) for extra richness.</li>
+            <li><strong>Serve:</strong> Pour the hot chocolate into a mug and top with whipped cream and chocolate shavings or cocoa powder if desired.</li>
+        </ol>
+    </section>
+
+    <section class="video-container">
+        <h3>Watch the Recipe Video</h3>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Hot Chocolate Recipe Video"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Food Courses. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Rolls Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recipe-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-image {
+            width: 45%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients {
+            width: 50%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .instructions {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .reviews {
+            margin-top: 3rem;
+            background-color: #fff;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Recipe Details</h1>
+</header>
+
+<main>
+    <h2 class="recipe-title">Spring Rolls</h2>
+
+    <div class="recipe-container">
+        <section class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>12 rice paper wrappers</li>
+                <li>1 cup shredded carrots</li>
+                <li>1 cup shredded cabbage</li>
+                <li>1/2 cup fresh mint leaves</li>
+                <li>1/2 cup fresh cilantro leaves</li>
+                <li>1/2 cup cooked shrimp or tofu (optional)</li>
+                <li>1/2 cup rice vermicelli noodles (cooked)</li>
+                <li>1/4 cup soy sauce or peanut sauce for dipping</li>
+            </ul>
+        </section>
+
+        <img class="recipe-image" src="https://kikkomanusa.com/homecooks/wp-content/uploads/2024/05/Thai-Spring-Roll-Noodle-Bowl-IMG-1.png" alt="Spring Rolls">
+    </div>
+
+    <section class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li>Prepare all the ingredients by cutting vegetables into thin strips and cooking vermicelli noodles.</li>
+            <li>Fill a large shallow dish with warm water. Dip one rice paper wrapper into the water for about 5 seconds until softened.</li>
+            <li>Lay the softened wrapper on a clean, damp towel.</li>
+            <li>Place a small portion of each ingredient in the center of the wrapper.</li>
+            <li>Fold the sides over the filling and roll tightly from the bottom up.</li>
+            <li>Repeat for the remaining wrappers and ingredients.</li>
+            <li>Serve with soy sauce or peanut sauce for dipping. Enjoy!</li>
+        </ol>
+    </section>
+
+    <section class="video-container">
+        <h3>Watch the Recipe Video</h3>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Spring Rolls Recipe Video"></iframe>
+    </section>
+
+    <section class="reviews">
+        <h3>Reviews for Spring Rolls</h3>
+        <div class="review-card">
+            <p class="review-author">Anna Roberts</p>
+            <p class="review-text">"These spring rolls were fresh and delicious! The peanut sauce was the perfect dip."</p>
+        </div>
+        <div class="review-card">
+            <p class="review-author">James Taylor</p>
+            <p class="review-text">"Super easy to make and great for a light meal. Will definitely try this again!"</p>
+        </div>
+        <div class="review-card">
+            <p class="review-author">Sophia Kim</p>
+            <p class="review-text">"Loved how customizable these are! Added some avocado, and it was amazing."</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Food Courses. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

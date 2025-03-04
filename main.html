@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeGuide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(224, 224, 224, 0.438);
+            padding: 0.5rem 2rem;
+        }
+
+        nav a {
+            color: black;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-right: 0.5rem;
+        }
+
+        .search-container button {
+            padding: 0.5rem 1rem;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .recipe-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .course-card {
+            position: relative;
+            width: 250px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        /* Recipe of the Day Styling */
+        .recipe-of-the-day {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .recipe-of-the-day img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .recipe-of-the-day h2 {
+            margin-top: 15px;
+            font-size: 1.8rem;
+        }
+
+        .recipe-of-the-day p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .recipe-of-the-day button {
+            padding: 0.5rem 1rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .recipe-of-the-day button a {
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<header><h1>KITCHEN DIARIES</h1></header>
+
+<nav>
+    <div>
+        <a href="#" id="home-link">Home</a>
+        <a href="course.html" id="course-link">Course</a>
+        <a href="tips.html" id="tips-link">Tips</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="search-container">
+        <input type="search" id="search" name="search" placeholder="Search Here..." />
+        <button type="submit" onclick="searchRecipes()">Search</button>
+    </div>
+    <div>
+        <a href="sign.html" id="signup-link">Sign Up</a>
+        <a href="log.html" id="login-link">Login</a>
+    </div>
+</nav>
+
+<main>
+    <section id="recipe-of-the-day" class="recipe-of-the-day">
+        <h2>Recipe of the Day</h2>
+        <img src="https://hips.hearstapps.com/hmg-prod/images/veggie-stir-fry-1597687367.jpg?crop=0.793xw:0.793xh;0.0619xw,0.0928xh&resize=1200:*" alt="Recipe of the Day">
+        <div class="content">
+            <h3>Vegetable Stir-Fry</h3>
+            <p>A colorful medley of vegetables sautéed with savory soy sauce, ginger, and garlic. Quick, healthy, and delicious!</p>
+            <button><a href="vegetablestirfry_recipe.html">View Recipe</a></button>
+        </div>
+    </section>
+
+    <section id="recipes">
+        <h2>Popular Recipes</h2>
+        <div class="recipe-container">
+            <!-- Recipe 1 -->
+            <div class="course-card">
+                <img src="https://orikaflavours.com/cdn/shop/articles/lndscpe.jpg?v=1695577046" alt="Spaghetti Carbonara">
+                <div class="content">
+                    <h3>Chicken Dum Biryani</h3>
+                    <p>Traditional Hyderabadi dish where marinated chicken and fragrant basmati rice are slow-cooked together, infusing rich flavors and aromas.</p>
+                    <button><a href="spaghetticarbonara_recipe.html" style="color:#3498db; text-decoration: none;">View Recipe</a></button>
+                </div>
+            </div>
+
+            <!-- Recipe 2 -->
+            <div class="course-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgty0-ZMWzyDBFRURA0Vdns-PT-l7ivkCqxdNsW4EiyC3sq3xoXaZvN3H2514he8f99KA&usqp=CAU" alt="Chocolate Cake">
+                <div class="content">
+                    <h3>Paneer Tikka</h3>
+                    <p>North Indian appetizer consisting of marinated paneer (Indian cottage cheese) cubes, grilled to perfection and served with mint chutney.</p>
+                    <button><a href="chocolatecake_recipe.html" style="color: #3498db; text-decoration: none;">View Recipe</a></button>
+                </div>
+            </div>
+             <div class="course-card">
+                <img src="https://www.freshtohome.com/blog/wp-content/uploads/2024/06/Screenshot-2024-06-26-135018.png" alt="Starter 2">
+                <div class="content">
+                    <h3>Mutton Keema</h3>
+                    <p>Flavorful Indian dish made from minced mutton cooked with aromatic spices, often served with naan or rice.</p>
+                    <button><a href="bruschetta-recipe.html" style="color: white; text-decoration: none;">View Recipe</a></button>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://recipes.net/wp-content/uploads/2023/10/how-to-cook-a-fish-steak-1698301584.jpg" alt="Starter 2">
+                <div class="content">
+                    <h3>Grilled Fish</h3>
+                    <p>Flavorful and healthy dish where fish fillets or whole fish are seasoned and cooked over an open flame or grill, imparting a smoky aroma and a crispy exterior while maintaining a tender interior.</p>
+                    <button><a href="bruschetta-recipe.html" style="color: white; text-decoration: none;">View Recipe</a></button>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://urbanfarmandkitchen.com/wp-content/uploads/2023/04/burrata-bruschetta-8.jpg" alt="Starter 2">
+                <div class="content">
+                    <h3>Bruschetta</h3>
+                    <p>Toasted bread topped with tomatoes, basil, and olive oil.</p>
+                    <button><a href="bruschetta-recipe.html" style="color: white; text-decoration: none;">View Recipe</a></button>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://www.secondrecipe.com/wp-content/uploads/2017/08/rajma-chawal-1.jpg" alt="Starter 2">
+                <div class="content">
+                    <h3>Rajma Chawal</h3>
+                    <p>Classic North Indian dish featuring red kidney beans cooked in a spiced gravy, served with steamed rice. It's a comforting and nutritious meal enjoyed by many.</p>
+                    <button><a href="bruschetta-recipe.html" style="color: white; text-decoration: none;">View Recipe</a></button>
+                </div>
+                  </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Food Courses. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

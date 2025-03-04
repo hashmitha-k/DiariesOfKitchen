@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiramisu Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recipe-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-image {
+            width: 45%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients {
+            width: 50%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-image {
+                width: 80%;
+                margin-bottom: 2rem;
+            }
+
+            .ingredients, .instructions {
+                width: 80%;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Recipe Details</h1>
+</header>
+
+<main>
+    <h2 class="recipe-title">Tiramisu</h2>
+
+    <div class="recipe-container">
+        <section class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>1 cup strong brewed coffee, cooled</li>
+                <li>1/4 cup coffee liqueur (optional)</li>
+                <li>1 package (7 oz) ladyfinger cookies</li>
+                <li>2 cups mascarpone cheese</li>
+                <li>1 cup heavy cream</li>
+                <li>1/2 cup powdered sugar</li>
+                <li>1 teaspoon vanilla extract</li>
+                <li>2 tablespoons unsweetened cocoa powder</li>
+                <li>1/4 cup chocolate shavings (optional)</li>
+            </ul>
+        </section>
+        <img class="recipe-image" src="" alt="Tiramisu">
+    </div>
+
+    <section class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li><strong>Prepare Coffee Mixture:</strong> In a shallow dish, combine the brewed coffee and coffee liqueur. Set aside.</li>
+            <li><strong>Whip Cream:</strong> In a large bowl, beat heavy cream and powdered sugar until stiff peaks form.</li>
+            <li><strong>Prepare Mascarpone Filling:</strong> In another bowl, whisk together mascarpone cheese and vanilla extract until smooth.</li>
+            <li><strong>Combine:</strong> Gently fold the whipped cream into the mascarpone mixture until well combined.</li>
+            <li><strong>Assemble Tiramisu:</strong> Quickly dip each ladyfinger into the coffee mixture (don’t soak). Layer them in the bottom of a 9x9-inch dish. Spread half of the mascarpone filling over the ladyfingers. Repeat the layers with remaining ladyfingers and mascarpone filling.</li>
+            <li><strong>Chill:</strong> Cover and refrigerate the tiramisu for at least 4 hours, or preferably overnight.</li>
+            <li><strong>Finish:</strong> Just before serving, dust the top with cocoa powder and sprinkle with chocolate shavings, if desired.</li>
+        </ol>
+    </section>
+
+    <section class="video-container">
+        <h3>Watch the Recipe Video</h3>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Tiramisu Recipe Video"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Food Courses. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
