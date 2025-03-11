@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegan Tacos Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recipe-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-image {
+            width: 45%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients {
+            width: 50%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions {
+            width: 100%;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-image {
+                width: 80%;
+                margin-bottom: 2rem;
+            }
+
+            .ingredients, .instructions {
+                width: 80%;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Recipe Details</h1>
+    <a href="index.html" id="home-link">Home</a>
+</header>
+
+<main>
+    <h2 class="recipe-title">Vegan Tacos</h2>
+
+    <div class="recipe-container">
+        <section class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>8 small corn tortillas</li>
+                <li>1 cup cooked black beans (or refried beans)</li>
+                <li>1 cup diced tomatoes</li>
+                <li>1 avocado, sliced</li>
+                <li>1/2 cup shredded lettuce</li>
+                <li>1/4 cup chopped red onion</li>
+                <li>1/4 cup chopped cilantro</li>
+                <li>1 tablespoon olive oil</li>
+                <li>1 teaspoon cumin</li>
+                <li>1 teaspoon chili powder</li>
+                <li>1/2 teaspoon garlic powder</li>
+                <li>1 lime, cut into wedges</li>
+                <li>1/4 cup salsa (optional)</li>
+                <li>1/4 cup vegan sour cream (optional)</li>
+            </ul>
+        </section>
+        <img class="recipe-image" src="" alt="Vegan Tacos">
+    </div>
+
+    <section class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li><strong>Prepare Filling:</strong> In a pan, heat olive oil over medium heat. Add black beans, cumin, chili powder, and garlic powder. Stir to combine and cook for 2-3 minutes until heated through.</li>
+            <li><strong>Warm Tortillas:</strong> Heat the tortillas in a separate pan for about 1 minute on each side until soft and warm.</li>
+            <li><strong>Assemble Tacos:</strong> Place warm tortillas on a plate. Add a spoonful of the black bean mixture in the center of each tortilla.</li>
+            <li><strong>Add Toppings:</strong> Top with diced tomatoes, avocado slices, shredded lettuce, red onion, cilantro, and a squeeze of lime. Optionally, add salsa and vegan sour cream for extra flavor.</li>
+            <li><strong>Serve:</strong> Serve immediately and enjoy your delicious vegan tacos!</li>
+        </ol>
+    </section>
+
+    <section class="video-container">
+        <h3>Watch the Recipe Video</h3>
+        <iframe src="https://www.youtube.com/embed/2K17gCjkUKI" title="Vegan Tacos Recipe Video"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Food Courses. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
