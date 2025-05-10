@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diaries of Kitchen - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 420px;
+      animation: fadeIn 0.6s ease-in-out;
+      
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .textbox {
+      margin-bottom: 20px;
+    }
+
+    .textbox input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #dcdde1;
+      border-radius: 10px;
+      font-size: 15px;
+      transition: 0.3s ease;
+    }
+
+    .textbox input:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    button.btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button.btn:hover {
+      background-color: #2980b9;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .remember-me input {
+      margin-right: 8px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .links a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .modal-content input {
+      width: 85%;
+      padding: 12px;
+      margin: 10px auto;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      font-size: 15px;
+    }
+
+    .modal-content button {
+      width: 85%;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .modal-content button:hover {
+      background-color: #2980b9;
+    }
+
+    .otp-container {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .otp-container input {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      margin: 5px;
+      text-align: center;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    #responseMessage {
+      margin-top: 15px;
+      color: #27ae60;
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      .modal-content input,
+      .modal-content button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="box">
+          <h2>Login to Diaries of Kitchen</h2>
+          <form id="loginForm">
+              <div class="textbox">
+                  <input type="email" id="login-email" placeholder="Email" required />
+              </div>
+              <div class="textbox">
+                  <input type="password" id="login-password" placeholder="Password" required />
+              </div>
+              <div class="remember-me">
+                  <input type="checkbox" name="remember" id="remember">
+                  <label for="remember">Remember Me</label>
+              </div>
+              <button type="submit" class="btn" id="login-button">Login</button>
+              <div id="loginMessage" style="display: none; margin-top: 10px;"></div>
+              <div class="links">
+                  <a href="#" id="forgot-password">Forgot Password?</a>
+                  <a href="sign.html">Sign Up</a>
+                  <a href="index.html">Back</a>
+              </div>
+          </form>
+      </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="forgotPasswordModal">
+      <div class="modal-content">
+          <h3>Password Recovery</h3>
+          <p>Enter your registered email address</p>
+          <input type="email" id="email" placeholder="example@mail.com" required>
+          <button id="sendOtpBtn">Send Reset Email</button>
+          <p id="responseMessage" style="display: none;"></p>
+          <button id="closeModal">Close</button>
+      </div>
+  </div>
+
+  <script type="module" src="firebaseauth.js"></script>
+  <script type="module">
+      // Close modal when clicking outside
+      const modal = document.getElementById("forgotPasswordModal");
+      window.addEventListener("click", (event) => {
+          if (event.target === modal) {
+              modal.style.display = "none";
+          }
+      });
+  </script>
+
+  <script>
+    document.getElementById('forgot-password').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('forgotPasswordModal').style.display = 'flex';
+    });
+
+    document.getElementById('closeModal').addEventListener('click', function () {
+      document.getElementById('forgotPasswordModal').style.display = 'none';
+    });
+
+    document.getElementById('sendOtpBtn').addEventListener('click', function () {
+      var email = document.getElementById('email').value;
+      if (email) {
+        var otp = Math.floor(1000 + Math.random() * 9000);
+        localStorage.setItem('otp', otp);
+        document.getElementById('otpContainer').style.display = 'block';
+        document.getElementById('responseMessage').style.display = 'none';
+      } else {
+        alert('Please enter a valid email.');
+      }
+    });
+
+    document.getElementById('verifyOtpBtn').addEventListener('click', function () {
+      var enteredOtp = document.getElementById('otp1').value +
+                       document.getElementById('otp2').value +
+                       document.getElementById('otp3').value +
+                       document.getElementById('otp4').value;
+
+      var storedOtp = localStorage.getItem('otp');
+
+      if (enteredOtp === storedOtp) {
+        document.getElementById('responseMessage').style.display = 'block';
+        document.getElementById('responseMessage').textContent = 'OTP Verified Successfully!';
+        document.getElementById('responseMessage').style.color = '#27ae60';
+      } else {
+        document.getElementById('responseMessage').style.display = 'block';
+        document.getElementById('responseMessage').textContent = 'Invalid OTP. Please try again.';
+        document.getElementById('responseMessage').style.color = '#e74c3c';
+      }
+    });
+  </script>
+  
+  
+
+ <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
+  <!-- (Add other firebase services like firestore if needed) -->
+  
+  <script>
+    // Your Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBlvkOICz_A5o-gNxuGE-X8w6P113-QBTU",
+     authDomain: "diaries-of-kitchen-6638d.firebaseapp.com",
+     projectId: "diaries-of-kitchen-6638d",
+     storageBucket: "diaries-of-kitchen-6638d.firebasestorage.app",
+      messagingSenderId: "69334070886",
+         appId: "1:69334070886:web:461fc15ea48bed8f9cdfa7",
+      measurementId: "G-9SH04G5KDR"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script type="module" src="firebaseauth.js"></script>
+
+</body>
+</html>
